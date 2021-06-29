@@ -1,8 +1,10 @@
-import './styles/main.css';
+import './assets/sass/main.sass';
+import Calculator from './Calculator';
+
 
 function App() {
     return (
-        <div>Hello</div>
+        <Calculator />
         )
 }
 
