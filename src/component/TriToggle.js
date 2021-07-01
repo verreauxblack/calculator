@@ -1,18 +1,8 @@
 function TriToggle({setTheme, custom, theme}) {
 
+    const onChange = (e) => setTheme(e.target.value);
 
-    const onChange = (e) => {
-        setTheme(e.target.value);
-    }
-
-    const check = () => {
-        if(custom === "0") 
-            return 5
-        if(custom === "1") 
-            return 30
-        if(custom === "2") 
-            return 49
-    }
+    const check = () => (custom === "0") ? 5 : (custom === "1") ? 30 : 49;
 
     return (
         <div className="wrapper" style={{background: theme.color.background.keypad}}>
@@ -27,4 +17,4 @@ function TriToggle({setTheme, custom, theme}) {
     )
 }
 
-export  default TriToggle
+export  default TriToggle;

@@ -1,9 +1,3 @@
-// import * as themes from '../theme/schema.json';
-// import { setToLS, getFromLS } from '../utils/storage';
-
-//  setToLS('theme', themes.data.theme1);
-
-// const theme = getFromLS('theme')
 const styles = (theme) => {
     const Style = {
         delStyle: {
@@ -27,8 +21,7 @@ const styles = (theme) => {
             WebkitBoxShadow: `0px 5px 0px 0px ${theme.color.keys.tertiary.shadow}`,
             MozBoxShadow: `0px 5px 0px 0px ${theme.color.keys.tertiary.shadow} `
         }
-    }
-
+    };
     return Style
 }
 export default styles;

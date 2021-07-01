@@ -1,8 +1,12 @@
-function Display({ value, onKeyPress, theme }) {
+function Display({ value, theme }) {
+    const style = {
+        background: theme.color.background.screen,
+        textShadow: `0 0 0 ${theme.color.head.primary }`
+    }
     return (
         <div>
             <form>
-                <input id='display' onKeyPress={onKeyPress} type="text" value={value} onChange={onKeyPress} style={{ background: theme.color.background.screen, color: theme.color.head.primary }} />
+                <input id='display' type="text" onChange={()=>""} value={value} style={style} />
             </form>
         </div>
     )
