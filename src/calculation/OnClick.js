@@ -17,22 +17,39 @@ const onClick = (result, button) => {
 }
 
 const checkDisplay = (result, button) => {
-    if (result === "0") {
-        return button;
+    if (button === "." && result === "0") { // if usser 1st enter dot
+        return "0."
+    } else if (result === "0") { // other than dot
+        if(button !== '+' && button !== '-' && button !== '/' && button !== '*') // numbers
+            return button;
+        else // if operatos
+            return "0"+button;
     } else if (result === Infinity) {
         return button
-    } else if (result !== "0" && flag !== 0) {
-        flag = 0
-        if (button !== '+' &&
-            button !== '-' &&
-            button !== '/' &&
-            button !== '*'
-        ) {
+    } else if (result !== "0" && flag !== 0) { // after Enter pressed
+        flag = 0;
+        if(button === "."){
+            return "0.";
+        }else if (button !== '+' && button !== '-' && button !== '/' && button !== '*') { // number means start a new value
             return button
-        } else {
+        } else { // operator means contiune with previous answer
             return result + button
         }
-    } else {
+    }
+    else if (result !== '0') {
+        let temp = result[result.length - 1];
+        if( temp === "." &&  button === '.') // not repeating dot in end 
+            return result;
+        if ((temp === "+" || temp === "-" || temp === "/" || temp === "*") &&
+            (button === '+' || button === '-' || button === '/' || button === '*') // not repeating operators in end
+        ) {
+            return  result.slice(0, -1) + button;
+        }
+        else {
+            return result + button
+        }
+    }
+    else {
         return result + button
     }
 };

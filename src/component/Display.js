@@ -6,7 +6,8 @@ function Display({ value, theme }) {
     return (
         <div>
             <form>
-                <input id='display' type="text" onChange={()=>""} value={value} style={style} />
+                <label htmlFor="dis"></label>
+                <input name="dis" id='display' type="text" onChange={()=>""} value={value} style={style} />
             </form>
         </div>
     )

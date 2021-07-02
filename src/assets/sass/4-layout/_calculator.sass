@@ -6,24 +6,31 @@
 body
     font-family: $Spartan
 
-
 .main
     width: 100vm
     height: 100vh
     display: flex
     justify-content: center
     align-items: center
-    flex-direction: column 
-
+    flex-direction: column
 
 .calc
     width: 285px
 
+.footer
+    position: absolute
+    bottom: 10px
+
+    a
+        text-decoration: none
+
 @media screen and ( min-width: 1440px )
     .calc
         width: 450px
-    
+    .footer
+        bottom: 30px
 @media screen and ( min-width: 1220px  ) and (max-width: 1439px)
     .calc
         width: 450px
-    
+    .footer
+        bottom: 30px
