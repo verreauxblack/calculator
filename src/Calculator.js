@@ -37,6 +37,7 @@ const Calculator = () => {
         setThemes(getFromLS('theme'))
     }, [customTheme])
     
+
     // function commafy( num ) {
     //     var str = num.toString().split('.');
     //     if (str[0].length >= 5) {
@@ -57,7 +58,7 @@ const Calculator = () => {
                 
             </section>
             <footer className="footer">
-                <a href="https://twitter.com/verreauxblack" rel="noreferrer" target="_blank" style={{ color: themes.color.head.primary }} > @verreauxblack</a>
+                <a href="https://twitter.com/verreauxblack" rel="noreferrer" target="_blank" style={{ color: themes.color.head.primary}} > @verreauxblack</a>
             </footer>
         </main>
     )
